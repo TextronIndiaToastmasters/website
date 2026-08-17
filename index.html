@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Textron India Toastmasters Club | Home</title>
+  <meta name="description" content="Textron India Toastmasters Club - building confident speakers and leaders." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-brand"><img src="assets/logo/toastmasters-logo.png" alt="Toastmasters Logo" class="logo" onerror="this.remove()" /> Textron India Toastmasters Club</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="events.html">Upcoming Events</a></li>
+        <li><a href="stats.html">Club Stats</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container" id="hero-content">
+        <h1 id="club-name">Textron India Toastmasters Club</h1>
+        <p class="tagline" id="club-tagline">Where Leaders Are Made</p>
+
+        <p class="countdown-label" id="countdown-label">Next meeting in</p>
+        <div class="countdown" id="countdown">
+          <p class="loading-msg">Loading next meeting details...</p>
+        </div>
+
+        <div>
+          <a href="#join" class="btn" id="guest-cta">Visit as a Guest</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>What is Toastmasters?</h2>
+        <p id="what-is-toastmasters" class="loading-msg">Loading...</p>
+      </div>
+    </section>
+
+    <section class="alt" id="join">
+      <div class="container">
+        <h2>Meeting Details</h2>
+        <div class="meeting-details">
+          <div class="detail-card">
+            <div class="label">Frequency</div>
+            <div class="value" id="meeting-frequency">-</div>
+          </div>
+          <div class="detail-card">
+            <div class="label">Time</div>
+            <div class="value" id="meeting-time">-</div>
+          </div>
+          <div class="detail-card">
+            <div class="label">Mode</div>
+            <div class="value" id="meeting-mode">-</div>
+          </div>
+          <div class="detail-card">
+            <div class="label">Location</div>
+            <div class="value" id="meeting-location">-</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="footer-year"></span> Textron India Toastmasters Club. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

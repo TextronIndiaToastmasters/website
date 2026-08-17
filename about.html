@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Textron India Toastmasters Club | About Us</title>
+  <meta name="description" content="Learn about the Textron India Toastmasters Club's history, mission and affiliation." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-brand"><img src="assets/logo/toastmasters-logo.png" alt="Toastmasters Logo" class="logo" onerror="this.remove()" /> Textron India Toastmasters Club</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="events.html">Upcoming Events</a></li>
+        <li><a href="stats.html">Club Stats</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>About Us</h1>
+        <p class="tagline">Our story, mission and affiliation</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Our History</h2>
+        <p id="about-history" class="loading-msg">Loading...</p>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <h2>Our Mission</h2>
+        <p id="about-mission" class="loading-msg">Loading...</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Club Affiliation</h2>
+        <div class="info-grid">
+          <div class="detail-card">
+            <div class="label">Club Number</div>
+            <div class="value" id="club-number">-</div>
+          </div>
+          <div class="detail-card">
+            <div class="label">District</div>
+            <div class="value" id="club-district">-</div>
+          </div>
+          <div class="detail-card">
+            <div class="label">Division</div>
+            <div class="value" id="club-division">-</div>
+          </div>
+          <div class="detail-card">
+            <div class="label">Area</div>
+            <div class="value" id="club-area">-</div>
+          </div>
+          <div class="detail-card">
+            <div class="label">Chartered</div>
+            <div class="value" id="club-chartered">-</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <h2>Committee / Officers</h2>
+        <div class="officers-grid" id="officers-grid">
+          <p class="loading-msg">Loading committee members...</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="footer-year"></span> Textron India Toastmasters Club. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/about.js"></script>
+  <script src="js/committee.js"></script>
+</body>
+</html>

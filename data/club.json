@@ -1,0 +1,30 @@
+{
+  "clubName": "Textron India Toastmasters Club",
+  "tagline": "Where Leaders Are Made",
+  "clubNumber": "3926170",
+  "district": "227",
+  "division": "C",
+  "area": "2",
+  "chartered": "YYYY-MM-DD",
+  "meeting": {
+    "frequency": "Every Thursday",
+    "dayOfWeek": "Thursday",
+    "time": "3:00 PM - 4:30 PM IST",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "mode": "Offline",
+    "location": "Textron India Office, Bangalore"
+  },
+  "about": {
+    "history": "Yet to add the story of how the Textron India Toastmasters Club was founded and its journey so far.",
+    "mission": "Yet to add the club's mission statement here, e.g. how it helps members build communication and leadership skills.",
+    "whatIsToastmasters": "Toastmasters International is a nonprofit educational organization that teaches public speaking and leadership skills through a worldwide network of clubs."
+  },
+  "contact": {
+    "email": "placeholder@example.com",
+    "phone": "+91 00000 00000",
+    "whatsapp": "https://wa.me/910000000000",
+    "linkedin": "https://www.linkedin.com/company/placeholder",
+    "instagram": "https://www.instagram.com/placeholder"
+  }
+}

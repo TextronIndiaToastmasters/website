@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Textron India Toastmasters Club | Club Stats</title>
+  <meta name="description" content="Attendance, role-taking, Buddy Olympics and People's Choice Award stats for the Textron India Toastmasters Club." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-brand"><img src="assets/logo/toastmasters-logo.png" alt="Toastmasters Logo" class="logo" onerror="this.remove()" /> Textron India Toastmasters Club</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="events.html">Upcoming Events</a></li>
+        <li><a href="stats.html">Club Stats</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Club Stats</h1>
+        <p class="tagline">Attendance, roles, Buddy Olympics and awards</p>
+        <div class="month-picker">
+          <label for="month-select">Viewing</label>
+          <select id="month-select"></select>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Buddy Olympics Leaderboard</h2>
+          <button class="btn-link" data-open-modal="buddy-olympics-modal">Show all</button>
+        </div>
+        <div class="chart" id="buddy-olympics-chart">
+          <p class="loading-msg">Loading...</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Role Takers Leaderboard</h2>
+          <button class="btn-link" data-open-modal="role-takers-modal">Show all</button>
+        </div>
+        <div class="chart" id="role-takers-chart">
+          <p class="loading-msg">Loading...</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>People's Choice Awards</h2>
+          <button class="btn-link" data-open-modal="pca-modal">Show all</button>
+        </div>
+        <div class="pca-list" id="pca-list">
+          <p class="loading-msg">Loading...</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Attendance Leaderboard</h2>
+          <button class="btn-link" data-open-modal="attendance-modal">Show all</button>
+        </div>
+        <div class="chart" id="attendance-chart">
+          <p class="loading-msg">Loading...</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="modal" id="attendance-modal">
+    <div class="modal-header">
+      <h3>Attendance — Full List</h3>
+      <button class="modal-close" data-close-modal aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <table class="stats-table" id="attendance-table">
+        <thead>
+          <tr><th>#</th><th>Name</th><th>Meetings Attended</th><th>Points</th><th>%</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="role-takers-modal">
+    <div class="modal-header">
+      <h3>Role Takers — Full List</h3>
+      <button class="modal-close" data-close-modal aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <table class="stats-table" id="role-takers-table">
+        <thead>
+          <tr><th>#</th><th>Name</th><th>Role Points</th><th>Total (Attendance + Roles)</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="buddy-olympics-modal">
+    <div class="modal-header">
+      <h3>Buddy Olympics — Full List</h3>
+      <button class="modal-close" data-close-modal aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <table class="stats-table" id="buddy-olympics-table">
+        <thead>
+          <tr><th>#</th><th>Team</th><th>Points</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="pca-modal">
+    <div class="modal-header">
+      <h3>People's Choice Awards — Full List</h3>
+      <button class="modal-close" data-close-modal aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="pca-list" id="pca-list-full"></div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="footer-year"></span> Textron India Toastmasters Club. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/stats.js"></script>
+</body>
+</html>

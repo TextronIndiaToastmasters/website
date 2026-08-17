@@ -1,0 +1,37 @@
+[
+  {
+    "role": "President",
+    "name": "Sayeed Ahmed K I",
+    "photo": "assets/officers/president.jpg"
+  },
+  {
+    "role": "VP Education",
+    "name": "Vimal Raj",
+    "photo": "assets/officers/vp-education.jpg"
+  },
+  {
+    "role": "VP Membership",
+    "name": "Suraj Kumbhar",
+    "photo": "assets/officers/vp-membership.jpg"
+  },
+  {
+    "role": "VP Public Relations",
+    "name": "Arpan Mondal",
+    "photo": "assets/officers/vp-public-relations.jpg"
+  },
+  {
+    "role": "Secretary",
+    "name": "Sathwik M S",
+    "photo": "assets/officers/secretary.jpg"
+  },
+  {
+    "role": "Treasurer",
+    "name": "Nisha L",
+    "photo": "assets/officers/treasurer.jpg"
+  },
+  {
+    "role": "Sergeant at Arms",
+    "name": "Vishnu Kumar",
+    "photo": "assets/officers/sergeant-at-arms.jpg"
+  }
+]
