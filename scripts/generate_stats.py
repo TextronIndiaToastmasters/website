@@ -1,8 +1,10 @@
-"""Converts the club's monthly Attendance/Role-Takers Excel workbooks into
-data/stats.json for the website. Each month gets its own file in excel-data/,
-named stats_<year>_<month>.xlsm (e.g. stats_2026_july.xlsm). Run this locally
-after updating/adding a workbook, then commit the regenerated JSON and push
-(Vercel redeploys automatically).
+"""Converts the club's Attendance/Role-Takers Excel workbook into
+data/stats.json for the website. All months/years live together in a single
+workbook, excel-data/stats.xlsm — new meetings are just added as extra
+columns/rows. A GitHub Actions workflow (.github/workflows/generate-stats.yml)
+runs this automatically and commits the regenerated JSON whenever
+excel-data/stats.xlsm changes on the main branch, so GitHub Pages picks it up
+without any manual step. You can still run it locally to preview changes.
 
 Usage:
     python scripts/generate_stats.py
@@ -11,7 +13,6 @@ Requires: pip install openpyxl
 """
 
 import json
-import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -19,41 +20,36 @@ from pathlib import Path
 import openpyxl
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = ROOT / "excel-data"
+WORKBOOK = ROOT / "excel-data" / "stats.xlsm"
 OUT = ROOT / "data" / "stats.json"
-
-FILENAME_RE = re.compile(r"^stats_(\d{4})_([a-zA-Z]+)\.xlsm$")
-MONTH_NUMBERS = {
-    "january": 1, "february": 2, "march": 3, "april": 4, "may": 5, "june": 6,
-    "july": 7, "august": 8, "september": 9, "october": 10, "november": 11, "december": 12,
-}
-
-
-def discover_workbooks():
-    """Returns (year, month, path) tuples sorted chronologically (oldest first)."""
-    found = []
-    for path in DATA_DIR.glob("stats_*.xlsm"):
-        match = FILENAME_RE.match(path.name)
-        if not match:
-            print(f"Skipping unrecognized file name: {path.name}", file=sys.stderr)
-            continue
-        year = int(match.group(1))
-        month = MONTH_NUMBERS.get(match.group(2).lower())
-        if month is None:
-            print(f"Skipping unrecognized month in file name: {path.name}", file=sys.stderr)
-            continue
-        found.append((year, month, path))
-    found.sort(key=lambda f: (f[0], f[1]))
-    return found
 
 
 def clean_name(value):
     return " ".join(str(value).split())
 
 
+def normalize(text):
+    """Collapses whitespace and lowercases, so sheet/column names match
+    regardless of stray spaces or letter casing."""
+    return " ".join(str(text).split()).lower()
+
+
+def get_sheet(wb, *accepted_names):
+    """Finds a worksheet by name, tolerant of case and extra whitespace, and
+    accepting any of the given alias spellings (e.g. Attendence/Attendance)."""
+    targets = {normalize(n) for n in accepted_names}
+    for sheet_name in wb.sheetnames:
+        if normalize(sheet_name) in targets:
+            return wb[sheet_name]
+    raise KeyError(
+        f"No sheet matching {accepted_names!r} found. Available sheets: {wb.sheetnames}"
+    )
+
+
 def find_col(header_row, label):
+    target = normalize(label)
     for cell in header_row:
-        if isinstance(cell.value, str) and cell.value.strip() == label:
+        if isinstance(cell.value, str) and normalize(cell.value) == target:
             return cell.column
     return None
 
@@ -71,10 +67,9 @@ def date_columns(header_row):
 
 
 def build_attendance(wb):
-    ws = wb["Attendence"]
+    ws = get_sheet(wb, "Attendence", "Attendance")
     header = ws[1]
     date_cols = date_columns(header)
-    points_col = find_col(header, "Points")
     dates = [ws.cell(row=1, column=c).value.strftime("%Y-%m-%d") for c in date_cols]
 
     entries = []
@@ -83,8 +78,8 @@ def build_attendance(wb):
         if not name:
             continue
         attended = sum(1 for c in date_cols if row[c - 1].value)
-        points = (row[points_col - 1].value if points_col else None) or attended * 2
         total = len(date_cols)
+        points = attended * 2
         percentage = round((attended / total) * 100, 1) if total else 0
         entries.append({
             "name": clean_name(name),
@@ -99,7 +94,7 @@ def build_attendance(wb):
 
 
 def build_role_takers(wb):
-    ws = wb["Role Takers (points)"]
+    ws = get_sheet(wb, "Role Takers (points)")
     header = ws[1]
     total_rt_col = find_col(header, "Total RT")
     total_combined_col = find_col(header, "Total Attendance & RT (No Need)")
@@ -120,7 +115,7 @@ def build_role_takers(wb):
 
 
 def build_buddy_olympics(wb):
-    ws = wb["Buddy Olympics"]
+    ws = get_sheet(wb, "Buddy Olympics")
     header = ws[1]
     date_cols = set(date_columns(header))
     fixed_cols = {1}
@@ -145,7 +140,7 @@ def build_buddy_olympics(wb):
 
 
 def build_people_choice(wb):
-    ws = wb["People Choice Award"]
+    ws = get_sheet(wb, "People Choice Award")
     header = ws[1]
     dates = [
         (cell.column, cell.value.strftime("%Y-%m-%d"))
@@ -169,29 +164,21 @@ def build_people_choice(wb):
 
 
 def main():
-    workbooks = discover_workbooks()
-    if not workbooks:
-        print(f"No workbooks found in {DATA_DIR} (expected stats_<year>_<month>.xlsm)", file=sys.stderr)
+    if not WORKBOOK.exists():
+        print(f"Workbook not found: {WORKBOOK}", file=sys.stderr)
         sys.exit(1)
 
-    months = []
-    for year, month, path in workbooks:
-        print(f"Processing {path.name}...")
-        wb = openpyxl.load_workbook(path, data_only=True)
-        dates, attendance = build_attendance(wb)
-        months.append({
-            "key": f"{year}-{month:02d}",
-            "label": datetime(year, month, 1).strftime("%B %Y"),
-            "meetingDates": dates,
-            "attendance": attendance,
-            "roleTakers": build_role_takers(wb),
-            "buddyOlympics": build_buddy_olympics(wb),
-            "peopleChoiceAwards": build_people_choice(wb),
-        })
+    print(f"Processing {WORKBOOK.name}...")
+    wb = openpyxl.load_workbook(WORKBOOK, data_only=True)
+    dates, attendance = build_attendance(wb)
 
     stats = {
         "generatedAt": datetime.now().isoformat(timespec="seconds"),
-        "months": months,
+        "meetingDates": dates,
+        "attendance": attendance,
+        "roleTakers": build_role_takers(wb),
+        "buddyOlympics": build_buddy_olympics(wb),
+        "peopleChoiceAwards": build_people_choice(wb),
     }
 
     OUT.parent.mkdir(parents=True, exist_ok=True)

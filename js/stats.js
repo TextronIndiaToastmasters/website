@@ -1,5 +1,5 @@
 // Club Stats page: renders top-5 leaderboards from data/stats.json (generated
-// from the club's monthly Excel workbooks via scripts/generate_stats.py), as
+// from the club's combined Excel workbook via scripts/generate_stats.py), as
 // a podium (top 3, with progress rings) + compact rows (4-5), with a
 // "Show all" modal per section listing the full data.
 
@@ -158,11 +158,11 @@ function renderPeopleChoice(meetings) {
   full.innerHTML = pcaCardsHtml(meetings);
 }
 
-function renderMonth(monthData) {
-  renderAttendance(monthData.attendance);
-  renderRoleTakers(monthData.roleTakers);
-  renderBuddyOlympics(monthData.buddyOlympics);
-  renderPeopleChoice(monthData.peopleChoiceAwards);
+function renderStats(stats) {
+  renderAttendance(stats.attendance);
+  renderRoleTakers(stats.roleTakers);
+  renderBuddyOlympics(stats.buddyOlympics);
+  renderPeopleChoice(stats.peopleChoiceAwards);
 }
 
 function initModals() {
@@ -184,19 +184,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   initModals();
 
   const stats = await fetchData("data/stats.json");
-  const select = document.querySelector("#month-select");
-  if (!stats || !stats.months || stats.months.length === 0) {
-    select.innerHTML = `<option>No data yet</option>`;
+  if (!stats || !stats.attendance) {
     return;
   }
 
-  const monthsDesc = [...stats.months].sort((a, b) => b.key.localeCompare(a.key));
-  select.innerHTML = monthsDesc.map((m) => `<option value="${m.key}">${m.label}</option>`).join("");
-  select.value = monthsDesc[0].key;
-  renderMonth(monthsDesc[0]);
-
-  select.addEventListener("change", () => {
-    const monthData = stats.months.find((m) => m.key === select.value);
-    if (monthData) renderMonth(monthData);
-  });
+  renderStats(stats);
 });

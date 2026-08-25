@@ -1,42 +1,45 @@
-// Contact Us page: renders the contact section from data/club.json as
-// clickable cards (email, phone, WhatsApp, LinkedIn, Instagram).
+// Contact Us page: submits the contact form to Formspree via fetch, showing
+// an inline success/error message instead of redirecting away from the site.
 
-function renderContact(club) {
-  const grid = document.querySelector("#contact-grid");
-  const contact = club?.contact;
+async function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const status = document.querySelector("#form-status");
+  const submitBtn = form.querySelector("button[type=submit]");
 
-  if (!contact) {
-    grid.innerHTML = `<p class="loading-msg">Contact details could not be loaded.</p>`;
-    return;
+  submitBtn.disabled = true;
+  status.textContent = "Sending...";
+  status.className = "form-status";
+
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
+    });
+
+    if (response.ok) {
+      status.textContent = "Thanks! Your message has been sent.";
+      status.className = "form-status success";
+      form.reset();
+    } else {
+      status.textContent = "Something went wrong. Please try again or email us directly.";
+      status.className = "form-status error";
+    }
+  } catch {
+    status.textContent = "Network error. Please try again or email us directly.";
+    status.className = "form-status error";
+  } finally {
+    submitBtn.disabled = false;
   }
-
-  document.title = `${club.clubName} | Contact Us`;
-
-  const channels = [
-    { label: "Email", value: contact.email, href: contact.email && `mailto:${contact.email}` },
-    { label: "Phone", value: contact.phone, href: contact.phone && `tel:${contact.phone.replace(/\s+/g, "")}` },
-    { label: "WhatsApp", value: contact.whatsapp, href: contact.whatsapp },
-    { label: "LinkedIn", value: contact.linkedin, href: contact.linkedin },
-    { label: "Instagram", value: contact.instagram, href: contact.instagram },
-  ].filter((c) => c.value);
-
-  if (channels.length === 0) {
-    grid.innerHTML = `<p class="loading-msg">No contact details added yet.</p>`;
-    return;
-  }
-
-  grid.innerHTML = channels
-    .map(
-      (c) => `
-      <a class="detail-card contact-card" href="${c.href}" target="_blank" rel="noopener">
-        <div class="label">${c.label}</div>
-        <div class="value">${c.value}</div>
-      </a>`
-    )
-    .join("");
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
   const club = await fetchData("data/club.json");
-  renderContact(club);
+  if (club?.clubName) {
+    document.title = `${club.clubName} | Contact Us`;
+  }
+
+  document.querySelector("#contact-form")?.addEventListener("submit", handleSubmit);
 });
+

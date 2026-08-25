@@ -342,20 +342,84 @@ h2 {
   font-size: 1.05rem;
 }
 
-.contact-card {
-  display: block;
-  color: inherit;
-  transition: transform 0.15s ease;
+/* ---------- Contact form ---------- */
+.contact-form {
+  max-width: 640px;
+  margin: 18px auto 0;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 18px;
 }
 
-.contact-card:hover {
-  transform: translateY(-3px);
-  text-decoration: none;
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
 }
 
-.contact-card .value {
-  color: var(--blue-dark);
-  word-break: break-word;
+@media (max-width: 560px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: grid;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.form-group label .optional {
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  font: inherit;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--cream);
+  color: var(--ink);
+  resize: vertical;
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: 2px solid var(--blue);
+  outline-offset: 1px;
+}
+
+.form-status {
+  font-weight: 600;
+  min-height: 1.2em;
+}
+
+.form-status.success {
+  color: #2f7a4d;
+}
+
+.form-status.error {
+  color: #b3261e;
 }
 
 /* ---------- About page grid ---------- */
