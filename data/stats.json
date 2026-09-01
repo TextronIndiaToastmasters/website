@@ -1,424 +1,412 @@
 {
-  "generatedAt": "2026-08-25T12:10:34",
+  "generatedAt": "2026-09-01T11:41:12",
   "meetingDates": [
     "2026-07-02",
     "2026-07-08",
     "2026-07-16",
     "2026-07-23",
     "2026-07-30",
-    "2026-08-06"
+    "2026-08-06",
+    "2026-08-13",
+    "2026-08-20",
+    "2026-08-27"
   ],
   "attendance": [
     {
-      "name": "Magisha K",
-      "meetingsAttended": 6,
-      "totalMeetings": 6,
-      "points": 12,
+      "name": "Girish Kaushal",
+      "meetingsAttended": 9,
+      "totalMeetings": 9,
+      "points": 18,
       "percentage": 100.0
     },
     {
       "name": "Sathwik M S",
-      "meetingsAttended": 6,
-      "totalMeetings": 6,
-      "points": 12,
+      "meetingsAttended": 9,
+      "totalMeetings": 9,
+      "points": 18,
       "percentage": 100.0
     },
     {
-      "name": "Sayeed Ahamed K I",
-      "meetingsAttended": 6,
-      "totalMeetings": 6,
-      "points": 12,
+      "name": "Suraj Kumbhar",
+      "meetingsAttended": 9,
+      "totalMeetings": 9,
+      "points": 18,
       "percentage": 100.0
     },
     {
       "name": "Vishnukumar K R",
-      "meetingsAttended": 6,
-      "totalMeetings": 6,
-      "points": 12,
+      "meetingsAttended": 9,
+      "totalMeetings": 9,
+      "points": 18,
       "percentage": 100.0
     },
     {
       "name": "Akash M",
-      "meetingsAttended": 5,
-      "totalMeetings": 6,
-      "points": 10,
-      "percentage": 83.3
+      "meetingsAttended": 8,
+      "totalMeetings": 9,
+      "points": 16,
+      "percentage": 88.9
+    },
+    {
+      "name": "Magisha K",
+      "meetingsAttended": 8,
+      "totalMeetings": 9,
+      "points": 16,
+      "percentage": 88.9
+    },
+    {
+      "name": "Sayeed Ahamed K I",
+      "meetingsAttended": 8,
+      "totalMeetings": 9,
+      "points": 16,
+      "percentage": 88.9
     },
     {
       "name": "Arpan Mondal",
-      "meetingsAttended": 5,
-      "totalMeetings": 6,
-      "points": 10,
-      "percentage": 83.3
-    },
-    {
-      "name": "Girish Kaushal",
-      "meetingsAttended": 5,
-      "totalMeetings": 6,
-      "points": 10,
-      "percentage": 83.3
-    },
-    {
-      "name": "Pavan Kumar T R",
-      "meetingsAttended": 5,
-      "totalMeetings": 6,
-      "points": 10,
-      "percentage": 83.3
-    },
-    {
-      "name": "Raja Aroganan R",
-      "meetingsAttended": 5,
-      "totalMeetings": 6,
-      "points": 10,
-      "percentage": 83.3
-    },
-    {
-      "name": "Shilpasri B M",
-      "meetingsAttended": 5,
-      "totalMeetings": 6,
-      "points": 10,
-      "percentage": 83.3
-    },
-    {
-      "name": "Suraj Kumbhar",
-      "meetingsAttended": 5,
-      "totalMeetings": 6,
-      "points": 10,
-      "percentage": 83.3
-    },
-    {
-      "name": "Vimal Raj B",
-      "meetingsAttended": 5,
-      "totalMeetings": 6,
-      "points": 10,
-      "percentage": 83.3
+      "meetingsAttended": 7,
+      "totalMeetings": 9,
+      "points": 14,
+      "percentage": 77.8
     },
     {
       "name": "Govindaraj T",
-      "meetingsAttended": 4,
-      "totalMeetings": 6,
-      "points": 8,
-      "percentage": 66.7
+      "meetingsAttended": 7,
+      "totalMeetings": 9,
+      "points": 14,
+      "percentage": 77.8
     },
     {
       "name": "Nisha L",
-      "meetingsAttended": 4,
-      "totalMeetings": 6,
-      "points": 8,
-      "percentage": 66.7
+      "meetingsAttended": 7,
+      "totalMeetings": 9,
+      "points": 14,
+      "percentage": 77.8
+    },
+    {
+      "name": "Shilpasri B M",
+      "meetingsAttended": 7,
+      "totalMeetings": 9,
+      "points": 14,
+      "percentage": 77.8
     },
     {
       "name": "Vikas Nambirajan",
-      "meetingsAttended": 4,
-      "totalMeetings": 6,
-      "points": 8,
+      "meetingsAttended": 7,
+      "totalMeetings": 9,
+      "points": 14,
+      "percentage": 77.8
+    },
+    {
+      "name": "Vimal Raj B",
+      "meetingsAttended": 7,
+      "totalMeetings": 9,
+      "points": 14,
+      "percentage": 77.8
+    },
+    {
+      "name": "Shobhitha KS",
+      "meetingsAttended": 6,
+      "totalMeetings": 9,
+      "points": 12,
       "percentage": 66.7
     },
     {
       "name": "Bindushree L",
-      "meetingsAttended": 3,
-      "totalMeetings": 6,
-      "points": 6,
-      "percentage": 50.0
+      "meetingsAttended": 5,
+      "totalMeetings": 9,
+      "points": 10,
+      "percentage": 55.6
     },
     {
-      "name": "Jinu Joy",
-      "meetingsAttended": 3,
-      "totalMeetings": 6,
-      "points": 6,
-      "percentage": 50.0
+      "name": "Pavan Kumar T R",
+      "meetingsAttended": 5,
+      "totalMeetings": 9,
+      "points": 10,
+      "percentage": 55.6
     },
     {
       "name": "Punyashree B",
-      "meetingsAttended": 3,
-      "totalMeetings": 6,
-      "points": 6,
-      "percentage": 50.0
+      "meetingsAttended": 5,
+      "totalMeetings": 9,
+      "points": 10,
+      "percentage": 55.6
     },
     {
-      "name": "Rajshekar P",
-      "meetingsAttended": 3,
-      "totalMeetings": 6,
-      "points": 6,
-      "percentage": 50.0
+      "name": "Raja Aroganan R",
+      "meetingsAttended": 5,
+      "totalMeetings": 9,
+      "points": 10,
+      "percentage": 55.6
     },
     {
-      "name": "Shobhitha KS",
-      "meetingsAttended": 3,
-      "totalMeetings": 6,
-      "points": 6,
-      "percentage": 50.0
+      "name": "Vijaya S Rao",
+      "meetingsAttended": 5,
+      "totalMeetings": 9,
+      "points": 10,
+      "percentage": 55.6
     },
     {
       "name": "Chanchal Joshy",
-      "meetingsAttended": 2,
-      "totalMeetings": 6,
-      "points": 4,
+      "meetingsAttended": 4,
+      "totalMeetings": 9,
+      "points": 8,
+      "percentage": 44.4
+    },
+    {
+      "name": "Jinu Joy",
+      "meetingsAttended": 4,
+      "totalMeetings": 9,
+      "points": 8,
+      "percentage": 44.4
+    },
+    {
+      "name": "Rajshekar P",
+      "meetingsAttended": 4,
+      "totalMeetings": 9,
+      "points": 8,
+      "percentage": 44.4
+    },
+    {
+      "name": "Rakesh Katti",
+      "meetingsAttended": 4,
+      "totalMeetings": 9,
+      "points": 8,
+      "percentage": 44.4
+    },
+    {
+      "name": "Sonia BV",
+      "meetingsAttended": 4,
+      "totalMeetings": 9,
+      "points": 8,
+      "percentage": 44.4
+    },
+    {
+      "name": "Shreyas M",
+      "meetingsAttended": 3,
+      "totalMeetings": 9,
+      "points": 6,
       "percentage": 33.3
     },
     {
       "name": "Simran Chibber",
-      "meetingsAttended": 2,
-      "totalMeetings": 6,
-      "points": 4,
-      "percentage": 33.3
-    },
-    {
-      "name": "Sonia BV",
-      "meetingsAttended": 2,
-      "totalMeetings": 6,
-      "points": 4,
-      "percentage": 33.3
-    },
-    {
-      "name": "Vasamsetti KrishnaChaitanya",
-      "meetingsAttended": 2,
-      "totalMeetings": 6,
-      "points": 4,
-      "percentage": 33.3
-    },
-    {
-      "name": "Vijaya S Rao",
-      "meetingsAttended": 2,
-      "totalMeetings": 6,
-      "points": 4,
+      "meetingsAttended": 3,
+      "totalMeetings": 9,
+      "points": 6,
       "percentage": 33.3
     },
     {
       "name": "Arjun Krishna SR",
-      "meetingsAttended": 1,
-      "totalMeetings": 6,
-      "points": 2,
-      "percentage": 16.7
+      "meetingsAttended": 2,
+      "totalMeetings": 9,
+      "points": 4,
+      "percentage": 22.2
     },
     {
-      "name": "Rakesh Katti",
+      "name": "Sooraj Kumar",
+      "meetingsAttended": 2,
+      "totalMeetings": 9,
+      "points": 4,
+      "percentage": 22.2
+    },
+    {
+      "name": "Vasamsetti KrishnaChaitanya",
+      "meetingsAttended": 2,
+      "totalMeetings": 9,
+      "points": 4,
+      "percentage": 22.2
+    },
+    {
+      "name": "Balaji Narayanappa",
       "meetingsAttended": 1,
-      "totalMeetings": 6,
+      "totalMeetings": 9,
       "points": 2,
-      "percentage": 16.7
+      "percentage": 11.1
+    },
+    {
+      "name": "Bharath R",
+      "meetingsAttended": 1,
+      "totalMeetings": 9,
+      "points": 2,
+      "percentage": 11.1
     },
     {
       "name": "Ravikiran NS",
       "meetingsAttended": 1,
-      "totalMeetings": 6,
+      "totalMeetings": 9,
       "points": 2,
-      "percentage": 16.7
+      "percentage": 11.1
     },
     {
-      "name": "Shreyas M",
+      "name": "Sharath S",
       "meetingsAttended": 1,
-      "totalMeetings": 6,
+      "totalMeetings": 9,
       "points": 2,
-      "percentage": 16.7
-    },
-    {
-      "name": "Sooraj Kumar",
-      "meetingsAttended": 1,
-      "totalMeetings": 6,
-      "points": 2,
-      "percentage": 16.7
+      "percentage": 11.1
     },
     {
       "name": "Suma Kola",
       "meetingsAttended": 1,
-      "totalMeetings": 6,
+      "totalMeetings": 9,
       "points": 2,
-      "percentage": 16.7
+      "percentage": 11.1
     },
     {
       "name": "Vinay Sarigoppula",
       "meetingsAttended": 1,
-      "totalMeetings": 6,
+      "totalMeetings": 9,
       "points": 2,
-      "percentage": 16.7
-    },
-    {
-      "name": "Balaji Narayanappa",
-      "meetingsAttended": 0,
-      "totalMeetings": 6,
-      "points": 0,
-      "percentage": 0.0
-    },
-    {
-      "name": "Bharath R",
-      "meetingsAttended": 0,
-      "totalMeetings": 6,
-      "points": 0,
-      "percentage": 0.0
+      "percentage": 11.1
     },
     {
       "name": "Sadhana Bhat",
       "meetingsAttended": 0,
-      "totalMeetings": 6,
-      "points": 0,
-      "percentage": 0.0
-    },
-    {
-      "name": "Sharath S",
-      "meetingsAttended": 0,
-      "totalMeetings": 6,
+      "totalMeetings": 9,
       "points": 0,
       "percentage": 0.0
     },
     {
       "name": "Vishal Baligar",
       "meetingsAttended": 0,
-      "totalMeetings": 6,
+      "totalMeetings": 9,
       "points": 0,
       "percentage": 0.0
     }
   ],
   "roleTakers": [
     {
-      "name": "Arpan Mondal",
-      "roleTakerPoints": 22,
-      "totalCombinedPoints": 32
-    },
-    {
-      "name": "Girish Kaushal",
-      "roleTakerPoints": 22,
-      "totalCombinedPoints": 32
-    },
-    {
-      "name": "Raja Aroganan R",
+      "name": "Vikas Nambirajan",
       "roleTakerPoints": 17,
-      "totalCombinedPoints": 27
-    },
-    {
-      "name": "Shilpasri B M",
-      "roleTakerPoints": 16,
-      "totalCombinedPoints": 26
+      "totalCombinedPoints": 31
     },
     {
       "name": "Govindaraj T",
       "roleTakerPoints": 15,
-      "totalCombinedPoints": 23
+      "totalCombinedPoints": 29
+    },
+    {
+      "name": "Girish Kaushal",
+      "roleTakerPoints": 13,
+      "totalCombinedPoints": 31
     },
     {
       "name": "Suraj Kumbhar",
-      "roleTakerPoints": 15,
-      "totalCombinedPoints": 25
-    },
-    {
-      "name": "Magisha K",
       "roleTakerPoints": 13,
-      "totalCombinedPoints": 25
-    },
-    {
-      "name": "Vimal Raj B",
-      "roleTakerPoints": 11,
-      "totalCombinedPoints": 21
-    },
-    {
-      "name": "Jinu Joy",
-      "roleTakerPoints": 10,
-      "totalCombinedPoints": 16
-    },
-    {
-      "name": "Vikas Nambirajan",
-      "roleTakerPoints": 10,
-      "totalCombinedPoints": 18
-    },
-    {
-      "name": "Akash M",
-      "roleTakerPoints": 9,
-      "totalCombinedPoints": 19
-    },
-    {
-      "name": "Nisha L",
-      "roleTakerPoints": 9,
-      "totalCombinedPoints": 17
-    },
-    {
-      "name": "Pavan Kumar T R",
-      "roleTakerPoints": 9,
-      "totalCombinedPoints": 19
-    },
-    {
-      "name": "Sathwik M S",
-      "roleTakerPoints": 9,
-      "totalCombinedPoints": 21
-    },
-    {
-      "name": "Sayeed Ahamed K I",
-      "roleTakerPoints": 8,
-      "totalCombinedPoints": 20
+      "totalCombinedPoints": 31
     },
     {
       "name": "Shobhitha KS",
-      "roleTakerPoints": 8,
-      "totalCombinedPoints": 14
+      "roleTakerPoints": 12,
+      "totalCombinedPoints": 24
     },
     {
-      "name": "Sooraj Kumar",
-      "roleTakerPoints": 7,
-      "totalCombinedPoints": 9
+      "name": "Bindushree L",
+      "roleTakerPoints": 10,
+      "totalCombinedPoints": 20
     },
     {
       "name": "Vishnukumar K R",
+      "roleTakerPoints": 9,
+      "totalCombinedPoints": 27
+    },
+    {
+      "name": "Arpan Mondal",
+      "roleTakerPoints": 8,
+      "totalCombinedPoints": 22
+    },
+    {
+      "name": "Nisha L",
+      "roleTakerPoints": 8,
+      "totalCombinedPoints": 22
+    },
+    {
+      "name": "Magisha K",
       "roleTakerPoints": 6,
-      "totalCombinedPoints": 18
+      "totalCombinedPoints": 22
+    },
+    {
+      "name": "Vijaya S Rao",
+      "roleTakerPoints": 6,
+      "totalCombinedPoints": 16
     },
     {
       "name": "Punyashree B",
       "roleTakerPoints": 5,
+      "totalCombinedPoints": 15
+    },
+    {
+      "name": "Shilpasri B M",
+      "roleTakerPoints": 5,
+      "totalCombinedPoints": 19
+    },
+    {
+      "name": "Vimal Raj B",
+      "roleTakerPoints": 5,
+      "totalCombinedPoints": 19
+    },
+    {
+      "name": "Arjun Krishna SR",
+      "roleTakerPoints": 3,
+      "totalCombinedPoints": 7
+    },
+    {
+      "name": "Rakesh Katti",
+      "roleTakerPoints": 3,
       "totalCombinedPoints": 11
     },
     {
-      "name": "Vijaya S Rao",
-      "roleTakerPoints": 5,
-      "totalCombinedPoints": 9
-    },
-    {
-      "name": "Bindushree L",
+      "name": "Sathwik M S",
       "roleTakerPoints": 3,
-      "totalCombinedPoints": 9
-    },
-    {
-      "name": "Rajshekar P",
-      "roleTakerPoints": 3,
-      "totalCombinedPoints": 9
+      "totalCombinedPoints": 21
     },
     {
       "name": "Simran Chibber",
       "roleTakerPoints": 3,
-      "totalCombinedPoints": 7
+      "totalCombinedPoints": 9
     },
     {
-      "name": "Vasamsetti KrishnaChaitanya",
+      "name": "Sonia BV",
       "roleTakerPoints": 3,
-      "totalCombinedPoints": 7
+      "totalCombinedPoints": 11
     },
     {
-      "name": "Vinay Sarigoppula",
-      "roleTakerPoints": 3,
-      "totalCombinedPoints": 5
-    },
-    {
-      "name": "Arjun Krishna SR",
+      "name": "Akash M",
       "roleTakerPoints": 0,
-      "totalCombinedPoints": 2
+      "totalCombinedPoints": 16
     },
     {
       "name": "Balaji Narayanappa",
       "roleTakerPoints": 0,
-      "totalCombinedPoints": 0
+      "totalCombinedPoints": 2
     },
     {
       "name": "Bharath R",
       "roleTakerPoints": 0,
-      "totalCombinedPoints": 0
+      "totalCombinedPoints": 2
     },
     {
       "name": "Chanchal Joshy",
       "roleTakerPoints": 0,
-      "totalCombinedPoints": 4
+      "totalCombinedPoints": 8
     },
     {
-      "name": "Rakesh Katti",
+      "name": "Jinu Joy",
       "roleTakerPoints": 0,
-      "totalCombinedPoints": 2
+      "totalCombinedPoints": 8
+    },
+    {
+      "name": "Pavan Kumar T R",
+      "roleTakerPoints": 0,
+      "totalCombinedPoints": 10
+    },
+    {
+      "name": "Raja Aroganan R",
+      "roleTakerPoints": 0,
+      "totalCombinedPoints": 10
+    },
+    {
+      "name": "Rajshekar P",
+      "roleTakerPoints": 0,
+      "totalCombinedPoints": 8
     },
     {
       "name": "Ravikiran NS",
@@ -431,22 +419,37 @@
       "totalCombinedPoints": 0
     },
     {
-      "name": "Sharath S",
+      "name": "Sayeed Ahamed K I",
       "roleTakerPoints": 0,
-      "totalCombinedPoints": 0
+      "totalCombinedPoints": 16
     },
     {
-      "name": "Shreyas M",
+      "name": "Sharath S",
       "roleTakerPoints": 0,
       "totalCombinedPoints": 2
     },
     {
-      "name": "Sonia BV",
+      "name": "Shreyas M",
+      "roleTakerPoints": 0,
+      "totalCombinedPoints": 6
+    },
+    {
+      "name": "Sooraj Kumar",
+      "roleTakerPoints": 0,
+      "totalCombinedPoints": 2
+    },
+    {
+      "name": "Suma Kola",
+      "roleTakerPoints": 0,
+      "totalCombinedPoints": 2
+    },
+    {
+      "name": "Vasamsetti KrishnaChaitanya",
       "roleTakerPoints": 0,
       "totalCombinedPoints": 4
     },
     {
-      "name": "Suma Kola",
+      "name": "Vinay Sarigoppula",
       "roleTakerPoints": 0,
       "totalCombinedPoints": 2
     },
@@ -458,31 +461,51 @@
   ],
   "buddyOlympics": [
     {
-      "team": "Vishnukumar K R",
-      "points": 109
-    },
-    {
       "team": "Suraj Kumbhar",
-      "points": 81
+      "points": 184
     },
     {
-      "team": "Vimal Raj B",
-      "points": 79
+      "team": "Vishnukumar K R",
+      "points": 182
     },
     {
       "team": "Nisha L",
-      "points": 79
+      "points": 144
     },
     {
       "team": "Sathwik M S",
-      "points": 68
+      "points": 127
+    },
+    {
+      "team": "Vimal Raj B",
+      "points": 107
     },
     {
       "team": "Arpan Mondal",
-      "points": 42
+      "points": 90
     }
   ],
   "peopleChoiceAwards": [
+    {
+      "date": "2026-08-27",
+      "awards": {
+        "Best Speaker": "Vijaya",
+        "Best TT Speaker": "Sathwik",
+        "Best Evaluator": "Arpan",
+        "Best Tag Role": "Girish",
+        "Best Leadership Role": "Vikas"
+      }
+    },
+    {
+      "date": "2026-08-20",
+      "awards": {
+        "Best Speaker": "Arpan",
+        "Best TT Speaker": "Vijaya",
+        "Best Evaluator": "Vimal",
+        "Best Tag Role": "Vijaya",
+        "Best Leadership Role": "Suraj"
+      }
+    },
     {
       "date": "2026-07-30",
       "awards": {
