@@ -49,7 +49,7 @@ function renderCountdown(dayOfWeek, startTime, endTime) {
 
     if (isMeetingHappeningNow(now, dayOfWeek, startTime, endTime)) {
       if (label) label.textContent = "";
-      el.innerHTML = `<div class="happening-now">🎤 Happening Now!</div>`;
+      el.innerHTML = `<div class="happening-now">Happening Now!</div>`;
       return;
     }
 

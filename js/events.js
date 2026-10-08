@@ -1,16 +1,8 @@
 // Upcoming Events page: renders A4-landscape poster PNGs from data/events.json
 // (posters live in assets/events/). Click a poster to view it enlarged.
 
-function renderEvents(events) {
-  const grid = document.querySelector("#events-grid");
-  if (!events || events.length === 0) {
-    grid.innerHTML = `<p class="loading-msg">No upcoming events yet.</p>`;
-    return;
-  }
-
-  const sorted = [...events].sort((a, b) => (a.date || "").localeCompare(b.date || ""));
-
-  grid.innerHTML = sorted
+function eventCardsHtml(events) {
+  return events
     .map(
       (e) => `
       <div class="event-card" data-image="${e.image}" data-title="${e.title || ""}">
@@ -23,6 +15,29 @@ function renderEvents(events) {
       </div>`
     )
     .join("");
+}
+
+function renderEvents(events) {
+  const grid = document.querySelector("#events-grid");
+  const pastSection = document.querySelector("#past-events-section");
+  const pastGrid = document.querySelector("#past-events-grid");
+
+  // "YYYY-MM-DD" in local time; events dated today still count as upcoming
+  const today = new Date().toLocaleDateString("en-CA");
+  const all = events || [];
+  const upcoming = all
+    .filter((e) => !e.date || e.date >= today)
+    .sort((a, b) => (a.date || "").localeCompare(b.date || ""));
+  const past = all
+    .filter((e) => e.date && e.date < today)
+    .sort((a, b) => b.date.localeCompare(a.date));
+
+  grid.innerHTML = upcoming.length
+    ? eventCardsHtml(upcoming)
+    : `<p class="loading-msg">There are no events scheduled yet. Stay tuned for something interesting!</p>`;
+
+  pastGrid.innerHTML = eventCardsHtml(past);
+  pastSection.hidden = past.length === 0;
 
   document.querySelectorAll(".event-card").forEach((card) => {
     card.addEventListener("click", () => {

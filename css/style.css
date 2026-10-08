@@ -835,6 +835,64 @@ h2 {
   border-radius: 8px;
 }
 
+/* ---------- Announcements ---------- */
+.announcements-feed {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.post-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: var(--cream-soft);
+}
+
+.post-author {
+  font-weight: 700;
+}
+
+.post-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.post-title {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+
+.post-text {
+  white-space: pre-line;
+  margin: 0 0 12px;
+}
+
+.post-image {
+  display: block;
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   text-align: center;
