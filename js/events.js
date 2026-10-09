@@ -1,15 +1,30 @@
 // Upcoming Events page: renders A4-landscape poster PNGs from data/events.json
 // (posters live in assets/events/). Click a poster to view it enlarged.
 
+// Falls back to legacy "date"; no end_date means a one-day event.
+function startDate(e) {
+  return e.start_date || e.date || "";
+}
+
+function endDate(e) {
+  return e.end_date || startDate(e);
+}
+
+function dateLabel(e) {
+  const start = startDate(e);
+  const end = endDate(e);
+  return end && end !== start ? `${start} &ndash; ${end}` : start;
+}
+
 function eventCardsHtml(events) {
   return events
     .map(
       (e) => `
       <div class="event-card" data-image="${e.image}" data-title="${e.title || ""}">
         <img class="event-poster" src="${e.image}" alt="${e.title || "Event poster"}" />
-        ${e.title || e.date ? `
+        ${e.title || startDate(e) ? `
         <div class="event-meta">
-          ${e.date ? `<span class="event-date">${e.date}</span>` : ""}
+          ${startDate(e) ? `<span class="event-date">${dateLabel(e)}</span>` : ""}
           ${e.title ? `<span class="event-title">${e.title}</span>` : ""}
         </div>` : ""}
       </div>`
@@ -22,15 +37,15 @@ function renderEvents(events) {
   const pastSection = document.querySelector("#past-events-section");
   const pastGrid = document.querySelector("#past-events-grid");
 
-  // "YYYY-MM-DD" in local time; events dated today still count as upcoming
+  // "YYYY-MM-DD" in local time; an event stays upcoming through its end date
   const today = new Date().toLocaleDateString("en-CA");
   const all = events || [];
   const upcoming = all
-    .filter((e) => !e.date || e.date >= today)
-    .sort((a, b) => (a.date || "").localeCompare(b.date || ""));
+    .filter((e) => !endDate(e) || endDate(e) >= today)
+    .sort((a, b) => startDate(a).localeCompare(startDate(b)));
   const past = all
-    .filter((e) => e.date && e.date < today)
-    .sort((a, b) => b.date.localeCompare(a.date));
+    .filter((e) => endDate(e) && endDate(e) < today)
+    .sort((a, b) => endDate(b).localeCompare(endDate(a)));
 
   grid.innerHTML = upcoming.length
     ? eventCardsHtml(upcoming)

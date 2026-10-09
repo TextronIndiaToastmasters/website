@@ -1,7 +1,13 @@
 [
   {
+    "title": "Icebreaker Speech Marathon",
+    "start_date": "2026-10-15",
+    "end_date": "2026-12-17",
+    "image": "assets/events/icebreaker.png"
+  },
+  {
     "title": "Humorous Speech Contest",
-    "date": "2026-09-03",
+    "start_date": "2026-09-03",
     "image": "assets/events/humorous_speech.png"
   }
 ]
